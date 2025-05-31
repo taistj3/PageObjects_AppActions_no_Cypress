@@ -17,6 +17,6 @@ describe('Cadastro de usuário', () => {
     cadastroPage.preencherSenha(senha);
     cadastroPage.enviar();
     cadastroPage.verificarContaCriada();
-  });
+     });
 });
 
