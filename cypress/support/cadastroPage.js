@@ -6,4 +6,4 @@ export const cadastroPage = {
   enviar: () => cy.get(':nth-child(4) > .button').click(),
   verificarContaCriada: () =>
     cy.get('.page-title', { timeout: 10000 }).should('contain.text', 'Minha conta')
-};
+}
