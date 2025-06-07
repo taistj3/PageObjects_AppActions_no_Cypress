@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Carrinho usando comando customizado', () => {
-   beforeEach(() => {
+  beforeEach(() => {
     cy.visit('/');
   });
 
@@ -13,5 +13,5 @@ describe('Carrinho usando comando customizado', () => {
     cy.get('#terms').click()
     cy.get('#place_order').click()
     cy.contains('Obrigado. Seu pedido foi recebido.').should('be.visible')
-  });
+  })
 });
