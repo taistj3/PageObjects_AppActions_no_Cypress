@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-09T18:03:47.282Z",
+    "end": "2025-06-09T18:03:55.543Z",
+    "duration": 8261,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2bb5945-6b3a-4e34-be24-9ab1a4b3b6fc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro.cy.js",
+      "file": "cypress\\e2e\\cadastro.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9a369e29-4a8c-48c7-9922-cae0d13041e9",
+          "title": "Cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve cadastrar usuário com sucesso",
+              "fullTitle": "Cadastro de usuário Deve cadastrar usuário com sucesso",
+              "timedOut": null,
+              "duration": 8237,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const email = _faker.faker.internet.email();\nconst senha = _faker.faker.internet.password(10, true);\n_cadastroPage.cadastroPage.acessarCadastro();\n_cadastroPage.cadastroPage.preencherEmail(email);\n_cadastroPage.cadastroPage.preencherSenha(senha);\n_cadastroPage.cadastroPage.enviar();\n_cadastroPage.cadastroPage.verificarContaCriada();",
+              "err": {},
+              "uuid": "e907d968-a4c8-451b-b64b-422964034463",
+              "parentUUID": "9a369e29-4a8c-48c7-9922-cae0d13041e9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e907d968-a4c8-451b-b64b-422964034463"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8237,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

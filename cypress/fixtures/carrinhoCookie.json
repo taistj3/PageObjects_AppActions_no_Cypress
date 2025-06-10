@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "cart": {
+        "_id": "6847051b693c5ac45bf195ec",
+        "products": [
+            {
+                "productId": {
+                    "_id": "683793a7eeee3279c776fa2b",
+                    "photos": [
+                        "https://via.placeholder.com/300"
+                    ],
+                    "name": "Tênis Esportivo",
+                    "price": 199.99,
+                    "quantity": 50,
+                    "specialPrice": 150
+                },
+                "quantity": 1,
+                "_id": "6847051b693c5ac45bf195ed"
+            }
+        ],
+        "userId": "68470518693c5ac45bf195cc",
+        "createdAt": "2025-06-09T16:00:27.489Z",
+        "updatedAt": "2025-06-09T16:00:27.489Z",
+        "__v": 0
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "success": false,
+  "message": "Erro ao adicionar produto!",
+  "cart": {
+    "items": [
+      {
+        "id": 999,
+        "name": "Camiseta Teste",
+        "size": "G",
+        "color": "Vermelho",
+        "quantity": 1
+      }
+    ],
+    "total": 99.99
+  }
+}
+
