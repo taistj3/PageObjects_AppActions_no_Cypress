@@ -26,5 +26,13 @@ Cypress.Commands.add('preencherCheckout', () => {
   cy.get(`.select2-selection__arrow`).eq(1).click();
   cy.get('.select2-search__field').type('Mato Grosso do Sul');
   cy.get(`[class="select2-results__option select2-results__option--highlighted"]`).click();
- 
+  cy.get('#payment_method_cod').click()
+  cy.get('#terms').click()
+  cy.get('#place_order').click()
+});
+
+Cypress.Commands.add('addProdutoCookie', () => {
+  cy.get('[data-testid="search-products"]').click();
+  cy.get(':nth-child(5) > .r-18u37iz').click();
+  cy.get('[data-testid="addToCart"]').click();
 });
