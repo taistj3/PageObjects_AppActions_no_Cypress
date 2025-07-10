@@ -1,0 +1,41 @@
+name: Cypress PageObjects e AppActions
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npm run test
+        continue-on-error: true
+
+      - name: Generate Mochawesome HTML report
+        run: |
+          npx marge cypress/results/*.json -f index -o cypress/results/final-report
+
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: cypress/results/final-report/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/results/final-report
